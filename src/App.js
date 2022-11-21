@@ -1,10 +1,10 @@
 
 import './App.css';
-import AddProduct from './components/AddProduct/AddProduct';
+import AddProduct from './components/Product/AddProduct';
 import Navbar from './components/Navbar/Navbar';
 import Product from './components/Product/Product';
-import SignUp from './components/SignUp/SignUp';
-import LogIn from './components/LogIn/LogIn';
+import SignUp from './components/Auth/SignUp';
+import LogIn from './components/Auth/LogIn';
 import {
   BrowserRouter as Router,
   Routes,
