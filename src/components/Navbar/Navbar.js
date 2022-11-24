@@ -8,16 +8,16 @@ export default function Navbar(props){
       <nav className="navbar navbar-expand-lg bg-dark">
         <div className="container-fluid">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <NavLink className="nav-link mx-2 active" to="/add-products" id="info">{props.addProduct}</NavLink>
+            <li className="nav-item">
+                <NavLink className="nav-link mx-2 active" to="/" id="notes">{props.notes}</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link mx-2 active" to="/" id="home">{props.product}</NavLink>
+                <NavLink className="nav-link mx-2 active" to="/mynotes" id="info">{props.myNotes}</NavLink>
               </li>
             </ul>
             <form className="d-flex" role="search">
               <NavLink className="btn btn-outline-light mx-2" to="/login">LogIn</NavLink>
-              <NavLink className="btn btn-outline-light mx-2" to="signup">SignUp</NavLink>
+              <NavLink className="btn btn-outline-light mx-2" to="/signup">SignUp</NavLink>
             </form>
         </div>
       </nav>
@@ -25,11 +25,11 @@ export default function Navbar(props){
 }
 
 Navbar.propTypes = {
-    product: PropTypes.string,
-    addProduct: PropTypes.string
+    notes: PropTypes.string,
+    myNotes: PropTypes.string
 }
 
 Navbar.defaultProps = {
-    product: "Product",
-    addProduct: "AddProduct"
+    notes: "Notes",
+    myNotes: "MyNotes"
 }
