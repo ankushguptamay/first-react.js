@@ -3,13 +3,13 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import SignUp from './components/Auth/SignUp';
 import LogIn from './components/Auth/LogIn';
+import MyNotes from './components/Note/MyNotes';
+import Notes from './components/Note/Notes';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import MyNotes from './components/Note/MyNotes';
-import Notes from './components/Note/Notes';
 
 function App() {
   return (
