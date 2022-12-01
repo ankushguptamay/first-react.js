@@ -1,13 +1,10 @@
-import React , { useEffect }from 'react'
+import React from 'react'
 import './navbar.css';
 import PropTypes from 'prop-types';
 import { NavLink , useLocation} from 'react-router-dom';
 
 export default function Navbar(props){
   let location = useLocation();
-  useEffect(() => {
-    console.log(location.pathname);
-  },[location])
   return(
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">

@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import NoteContext from '../../Context/Notes/noteContext';
 
-export default function MyNotes(props){
+console.log(NoteContext);
+
+export default function MyNotes(){
+    const { notesInitial } = useContext(NoteContext.notesInitial);
     return(
         <div className='container'>
             <div className='m-3 text-center'>
@@ -16,6 +20,13 @@ export default function MyNotes(props){
                     <button className="btn btn-outline-info mx-2" type="submit">Add Note</button>
                 </form>
             </div>
+            <div className='container my-3'>
+                <h2> My Notes</h2>
+                {notesInitial.map((note) => {
+                    return note.title;
+                })}
+            </div>
         </div>
+        
     );
 }
