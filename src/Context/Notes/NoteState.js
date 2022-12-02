@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState} from "react";
 import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
@@ -19,11 +19,11 @@ const NoteState = (props) => {
         },
     ];
     //console.log(notesInitial.title);
-   // const [notes, setNotes] = useState(notesInitial);
+    const [notes, setNotes] = useState(notesInitial);
 
 
     return(
-        <NoteContext.Provider value={{notesInitial}}>
+        <NoteContext.Provider value={{notes}}>
             {props.children}
         </NoteContext.Provider>
     )
