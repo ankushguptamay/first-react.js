@@ -46,6 +46,7 @@ const NoteState = (props) => {
     //Add a Note
     const addNote = (notename, image) => {
         console.log("adding a note")
+        console.log(image);
         const note = {
             "id": 10,
             "note": notename,
