@@ -1,28 +1,35 @@
-import React from 'react'
+import React, { useContext, useState}from 'react'
 import Notes from './Notes';
+import noteContext from '../../Context/Notes/noteContext';
 
-export default function AddNotes(){
+export default function AddNotes() {
+    const { addNote } = useContext(noteContext);
+    const [ note, setNote] =useState({notename: "", image: "default"});
+    const handkeClick = (e)=> {
+        e.preventDefault();
+        addNote(note.notename, note.image);
+    }
+    const onChange = (e)=> {
+        setNote({...note, [e.target.name]: e.target.value})
+    }
 
-    return(
+    return (
         <>
-        <div className='container'>
-            <div className='m-3 text-center'>
-                <form>
-                    <div className="mb-3">
-                        <h5>Title</h5>
-                        <input type="text"/>
-                    </div>
-                    <div className="mb-3">
-                        <h5>Note</h5>
-                        <input type="text"/>
-                    </div>
-                    <button className="btn btn-outline-info mx-2" type="submit">Add Note</button>
-                </form>
+            <div className='container'>
+                <div className='m-3 text-center'>
+                    <form className="mt-4" encType="multipart/form-data">
+                        <div className="form-group">
+                            <label htmlFor="note" className="col-sm-2 col-form-label">Note:</label>
+                            <input type="text" name="notename" id="note" onChange={onChange} />
+                            <label htmlFor="input-files" className="col-sm-2 col-form-label">Image:</label>
+                            <input type="file" name="image" id="input-files" onChange={onChange}/>
+                        </div>
+                        <button type="submit" className="btn btn-primary" onClick={handkeClick}>AddNote</button>
+                    </form>
+                </div>
+                <hr />
+                <Notes />
             </div>
-        <hr/>
-        <Notes />
-        </div>
         </>
-        
     );
 }

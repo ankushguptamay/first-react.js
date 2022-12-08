@@ -1,15 +1,16 @@
-import React from 'react'
-//import './Notes.css';
+import React, { useContext } from 'react'
+import noteContext from '../../Context/Notes/noteContext';
 
-export default function MyNotes(props){
-
+export default function MyNotes(props) {
+    const { deleteNote } = useContext(noteContext);
     const { note } = props;
-    return(
+
+    return (
         <div className="card m-3 text-center">
             <div className="card-body">
-                <h5 className="title">{note.title}</h5>
+                <img src="..." className="card-img-top" alt="..." />
                 <p className="note">{note.note}</p>
-                <button className="btn btn-outline-warning mx-2" type="submit">Delete</button>
+                <button className="btn btn-outline-warning mx-2" type="submit" onClick={() => deleteNote(note.id)}>Delete</button>
                 <button className="btn btn-outline-warning mx-2" type="submit">Update</button>
             </div>
         </div>
