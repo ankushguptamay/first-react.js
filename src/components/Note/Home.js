@@ -6,14 +6,12 @@ export default function Home(props){
     return(
         <div className='container d-flex flex-wrap'>
             <div className="card m-3 text-center">
-                <img src="./download.jpg" className="card-img-top" alt="not available"/>
                 <div className="card-body">
-                    <h5 className="editerName">{props.title}</h5>
+                    <h5 className="title">{props.title}</h5>
                     <p className="note">{props.note}</p>
-                    <button className="btn btn-outline-warning mx-2" type="submit">Delete</button>
-                    <button className="btn btn-outline-warning mx-2" type="submit">Update</button>
                 </div>
             </div>
+            
         </div>
     );
 }

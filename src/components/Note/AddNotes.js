@@ -19,9 +19,9 @@ export default function AddNotes(){
                     <button className="btn btn-outline-info mx-2" type="submit">Add Note</button>
                 </form>
             </div>
-        </div>
-
+        <hr/>
         <Notes />
+        </div>
         </>
         
     );

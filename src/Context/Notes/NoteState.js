@@ -17,6 +17,34 @@ const NoteState = (props) => {
             "createdAt": "2022-11-25T11:03:13.000Z",
             "updatedAt": "2022-11-25T11:03:13.000Z"
         },
+        {
+            "id": 9,
+            "title": "mathe",
+            "note": "addition",
+            "createdAt": "2022-11-25T11:02:57.000Z",
+            "updatedAt": "2022-11-25T11:02:57.000Z"
+        },
+        {
+            "id": 10,
+            "title": "mathe",
+            "note": "minimum",
+            "createdAt": "2022-11-25T11:03:13.000Z",
+            "updatedAt": "2022-11-25T11:03:13.000Z"
+        },
+        {
+            "id": 9,
+            "title": "mathe",
+            "note": "addition",
+            "createdAt": "2022-11-25T11:02:57.000Z",
+            "updatedAt": "2022-11-25T11:02:57.000Z"
+        },
+        {
+            "id": 10,
+            "title": "mathe",
+            "note": "minimum",
+            "createdAt": "2022-11-25T11:03:13.000Z",
+            "updatedAt": "2022-11-25T11:03:13.000Z"
+        },
     ];
     //console.log(notesInitial.title);
     const [notes, setNotes] = useState(notesInitial);
